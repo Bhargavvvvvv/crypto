@@ -14,10 +14,10 @@ form.addEventListener('submit',(e)=>{
 });
 
 const fetchPrice = async(ctype) =>{
-    const r = await axios.get(`https://api.cryptonator.com/api/ticker/${ctype}`);
+    const r = await axios.get(`https://www.api.cryptonator.com/api/ticker/${ctype}`);
     console.log(r.data.ticker.price);
     showPrice(r.data.ticker,r.data.timestamp);
-     rec = setTimeout(() => fetchPrice(`https://api.cryptonator.com/api/ticker/${ctype}`), 10000);
+     rec = setTimeout(() => fetchPrice(`https://www.api.cryptonator.com/api/ticker/${ctype}`), 10000);
 }
 
 function timeConverter(UNIX_timestamp){
